@@ -1,0 +1,45 @@
+\documentclass[12pt]{report}
+
+\input{packages.tex}
+\input{gsuFormat.tex}
+\input{commands.tex}
+
+%%%%%%%%%%%%%%%%
+% THE DOCUMENT %
+%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% FRONT MATTER
+\input{../frontmatter/frontmatter.tex}
+\newpage
+
+% table of contents %
+\tableofcontents
+\newpage
+
+% list of tables %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoftables
+\newpage
+
+% list of figures %
+\phantomsection
+\addcontentsline{toc}{chapter}{\texorpdfstring{\listtablename \dotfill}{\listtablename}}
+\listoffigures
+\newpage
+
+% CHAPTERS %
+\cleardoublepage
+\pagenumbering{arabic}
+
+\input{../chapters/chapters.tex}
+\newpage
+
+% BACK MATTER
+\input{../backmatter/backmatter.tex}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

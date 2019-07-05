@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%
+% GSU FORMATTING %
+%%%%%%%%%%%%%%%%%%
+
+% sets 1 inch margins
+\usepackage[margin=1in]{geometry}
+
+% binding offset
+% ONLY USE ONCE DOCUMENT IS READY FOR PRINTING!
+% CHANGES PAGE LAYOUT!
+%\usepackage[margin=1in, twoside, bindingoffset=0.5in]{geometry}
+
+% sets spacing to double spaced
+\usepackage{setspace}
+\doublespacing
+
+% makes section (etc.) titles 12 pt font
+\usepackage{titlesec}
+\titleformat*{\section}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsection}{\fontsize{12}{15}\bfseries}
+\titleformat*{\subsubsection}{\fontsize{12}{15}\bfseries}
+
+% sets depth of subsections, match this with how deep you go above
+\setcounter{secnumdepth}{3}
+
+% makes chapter titles 12 pt font
+\titleformat{\chapter}[display]
+{\normalfont \bfseries\centering}
+{\chaptertitlename\ \thechapter}{12pt}
+{\normalfont \bfseries\centering}
+
+% hyper ref without coloring the links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all
+}
+
+% prevent widows and orphans, or at least makes LaTeX try really hard to do so
+\widowpenalty10000
+\clubpenalty10000
